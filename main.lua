@@ -1,4 +1,6 @@
+
 love.graphics.setDefaultFilter("nearest", "nearest")
+
 local Player = require("player")
 local Coin = require("coin")
 local GUI = require("gui")
@@ -7,6 +9,9 @@ local Stone = require("stone")
 local Camera = require("camera")
 local Enemy = require("enemy")
 local Map = require("map")
+
+
+
 
 function love.load()
 	Enemy.loadAssets()
@@ -46,6 +51,10 @@ end
 function love.keypressed(key)
 	Player:jump(key)
 end
+
+
+
+
 
 function beginContact(a, b, collision)
 	if Coin.beginContact(a, b, collision) then return end
